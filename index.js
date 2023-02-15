@@ -56,7 +56,7 @@ const mailSend = async (email) => {
     text: "Hello world?", // plain text body
     html: `<div>
     <p>${content}</p>
-    <img src='${process.env.URL}/event'/>
+    <img src='${process.env.URL}event'/>
     </div>`,
   });
 
