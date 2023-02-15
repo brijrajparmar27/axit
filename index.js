@@ -11,6 +11,7 @@ var validator = require("email-validator");
 const fetch = require('node-fetch');
 const ImageModel = require('./model/img');
 const fileUpload = require("express-fileupload");
+require("dotenv").config();
 app.use(express.json())
 
 const nodemailer = require("nodemailer");
