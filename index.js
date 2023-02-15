@@ -67,11 +67,16 @@ app.use(
   fileUpload()
 );
 
+app.get("/", (req, res) => {
+  res.json({ "msg": "hello world" }).status(200);
+})
+
 app.post('/', (req, res) => {
   console.log(req.body)
   let email = req.body.email
   console.log(email)
   mailSend(email)
+  res.send("email sent");
 })
 
 app.get('/event', async (req, res) => {
